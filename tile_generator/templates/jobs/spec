@@ -45,6 +45,10 @@ properties:
     description: 'Name of the UAA Admin Client'
   uaa.admin_client_secret:
     description: 'Password of the UAA Admin Client'
+  uaa.tile_installer_client_id:
+    description: 'Name of the UAA Tile Installer Client'
+  uaa.tile_installer_client_secret:
+    description: 'Password of the UAA Tile Installer Client'
   apply_open_security_group:
     description: 'Open security group for the app to access outside'
     default: false

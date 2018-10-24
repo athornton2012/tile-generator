@@ -322,6 +322,8 @@ class Config(dict):
 			'uaa': {
 				'admin_client': '(( ..cf.uaa.admin_client_credentials.identity ))',
 				'admin_client_secret': '(( ..cf.uaa.admin_client_credentials.password ))',
+				'tile_installer_client_id': '(( ..cf.uaa.tile_installer_client_credentials.identity ))',
+				'tile_installer_client_secret': '(( ..cf.uaa.tile_installer_client_credentials.password ))',
 			},
 			'apply_open_security_group': '(( .properties.apply_open_security_group.value ))',
 			'allow_paid_service_plans': '(( .properties.allow_paid_service_plans.value ))',
