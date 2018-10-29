@@ -320,10 +320,8 @@ class Config(dict):
 				'admin_password': '(( ..cf.uaa.system_services_credentials.password ))',
 			},
 			'uaa': {
-				'admin_client': '(( ..cf.uaa.admin_client_credentials.identity ))',
-				'admin_client_secret': '(( ..cf.uaa.admin_client_credentials.password ))',
-				'tile_installer_client_id': '(( ..cf.uaa.admin_client_credentials.value_present? ? ..cf.uaa.tile_installer_client_credentials.identity : [] ))',
-				'tile_installer_client_secret': '(( ..cf.uaa.admin_client_credentials.value_present? ? ..cf.uaa.tile_installer_client_credentials.password : [] ))',
+				'client_id': '(( ..cf.product_version >= 2.4 ? ..cf.uaa.tile_installer_client_credentials.identity : ..cf.uaa.admin_client_credentials.identity ))',
+				'client_secret': '(( ..cf.product_version >= 2.4 ? ..cf.uaa.tile_installer_client_credentials.password : ..cf.uaa.admin_client_credentials.password ))',
 			},
 			'apply_open_security_group': '(( .properties.apply_open_security_group.value ))',
 			'allow_paid_service_plans': '(( .properties.allow_paid_service_plans.value ))',
