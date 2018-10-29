@@ -320,7 +320,7 @@ class Config(dict):
 				'admin_password': '(( ..cf.uaa.system_services_credentials.password ))',
 			},
 			'uaa': {
-				'client_id': '(( ..cf.uaa ))'
+				'client_id': '(( ..cf.uaa.value ))'
 			},
 			'apply_open_security_group': '(( .properties.apply_open_security_group.value ))',
 			'allow_paid_service_plans': '(( .properties.allow_paid_service_plans.value ))',
